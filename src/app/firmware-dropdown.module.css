@@ -1,0 +1,81 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid #111;
+  color: #111;
+  background: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+:global(.dark) .btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+:global(.dark) .btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.arrow {
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
+}
+
+:global(.dark) .dropdown {
+  background: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.item {
+  display: block;
+  padding: 10px 16px;
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.15s;
+}
+
+.item:hover {
+  background: #f3f4f6;
+}
+
+:global(.dark) .item {
+  color: #e5e5e5;
+}
+
+:global(.dark) .item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
