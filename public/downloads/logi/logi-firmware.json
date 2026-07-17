@@ -1,13 +1,13 @@
 {
-  "version": "1.18.0",
-  "web": "web_u1-18-0.zip",
+  "version": "1.19.0",
+  "web": "web_u1-19-0.zip",
   "firmwares": [
-    { "label": "ESP8266 (Wemos D1 Mini)", "file": "esp8266_v1-18-0_firmware.bin" },
-    { "label": "ESP32 (Wemos D1 Mini32)", "file": "esp32_v1-18-0_firmware.bin" },
-    { "label": "ESP32 (classic RX3/TX1)", "file": "esp32_rx3_tx1_v1-18-0_firmware.bin" },
-    { "label": "ESP32 (inverted RX1/TX3)", "file": "esp32_inverted_rx1_tx3_v1-18-0_firmware.bin" },
-    { "label": "ESP32-S2 (Lolin S2 Mini)", "file": "esp32s2_v1-18-0_firmware.bin" },
-    { "label": "ESP32-S3", "file": "esp32s3_v1-18-0_firmware.bin" }
+    { "label": "ESP8266 (Wemos D1 Mini)", "file": "esp8266_v1-19-0_firmware.bin" },
+    { "label": "ESP32 (Wemos D1 Mini32)", "file": "esp32_v1-19-0_firmware.bin" },
+    { "label": "ESP32 (classic RX3/TX1)", "file": "esp32_rx3_tx1_v1-19-0_firmware.bin" },
+    { "label": "ESP32 (inverted RX1/TX3)", "file": "esp32_inverted_rx1_tx3_v1-19-0_firmware.bin" },
+    { "label": "ESP32-S2 (Lolin S2 Mini)", "file": "esp32s2_v1-19-0_firmware.bin" },
+    { "label": "ESP32-S3", "file": "esp32s3_v1-19-0_firmware.bin" }
   ],
   "downloads": [
     {
