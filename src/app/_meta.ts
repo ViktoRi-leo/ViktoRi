@@ -11,4 +11,9 @@ export default {
     type: 'page',
     href: '/watchLogs.html',
   },
+  configurator: {
+    title: 'Конфигуратор',
+    type: 'page',
+    href: '/configurator/index.html',
+  },
 }
