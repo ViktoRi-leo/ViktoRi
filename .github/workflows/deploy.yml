@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Пересборка, чтобы подхватить новый релиз зарядного с Gitverse
+  schedule:
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:

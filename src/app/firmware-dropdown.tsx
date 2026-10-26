@@ -10,11 +10,13 @@ type Download = {
 
 export function FirmwareDropdown({
   version,
+  archiveUrl,
   file,
   downloads,
   label,
 }: {
   version: string
+  archiveUrl?: string | null
   file?: string
   downloads: Download[]
   label?: string
@@ -44,7 +46,16 @@ export function FirmwareDropdown({
       </button>
       {open && (
         <div className={styles.dropdown}>
-          {file && (
+          {archiveUrl && (
+            <a
+              href={archiveUrl}
+              className={styles.item}
+              onClick={() => setOpen(false)}
+            >
+              Скачать с Gitverse (.zip)
+            </a>
+          )}
+          {!archiveUrl && file && (
             <a
               href={`${basePath}/downloads/${file}`}
               download

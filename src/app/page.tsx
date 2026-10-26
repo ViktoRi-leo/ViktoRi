@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 import { FirmwareDropdown } from './firmware-dropdown'
-import firmware from '../../public/downloads/charger/firmware.json'
+import { getChargerRelease, chargerDownloads } from './charger-release'
 
 const features = [
   { title: 'Open Source', desc: 'Открытая схема и прошивка на Arduino (ATmega328P, LGT8F328P)' },
@@ -15,7 +15,9 @@ const features = [
   { title: 'Логгер', desc: 'Запись данных на SD-карту, графики заряда в браузере по Wi-Fi в реальном времени' },
 ]
 
-export default function IndexPage() {
+export default async function IndexPage() {
+  const release = await getChargerRelease()
+
   return (
     <div className={styles.bg}>
     <div className={styles.container}>
@@ -24,15 +26,16 @@ export default function IndexPage() {
         <p className={styles.subtitle}>
           Универсальное зарядное устройство с открытым исходным кодом на базе Arduino
         </p>
-        <p className={styles.version}>Актуальная версия: {firmware.version}</p>
+        <p className={styles.version}>Актуальная версия: {release.version}</p>
         <div className={styles.buttons}>
           <Link href="/docs" className={styles.btnPrimary}>
             Читать документацию
           </Link>
           <FirmwareDropdown
-            version={firmware.version}
-            file={firmware.file}
-            downloads={firmware.downloads}
+            version={release.version}
+            archiveUrl={release.archiveUrl}
+            file={release.file}
+            downloads={chargerDownloads}
           />
         </div>
       </div>

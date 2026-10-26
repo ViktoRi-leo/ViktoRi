@@ -1,5 +1,6 @@
-import firmware from '../../public/downloads/charger/firmware.json'
+import { getChargerRelease } from './charger-release'
 
-export function FirmwareVersion() {
-  return <>{firmware.version}</>
+export async function FirmwareVersion() {
+  const release = await getChargerRelease()
+  return <>{release.version}</>
 }
