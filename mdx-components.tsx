@@ -5,6 +5,7 @@ import { FirmwareDownload } from './src/app/firmware-download'
 import { ImageGallery } from './src/app/image-gallery'
 import { LoggerFirmwareDownload } from './src/app/logger-firmware-download'
 import { LogerViktoriDownload } from './src/app/loger-viktori-download'
+import { AppDownload, AppVersion } from './src/app/app-download'
 
 const docsComponents = getDocsMDXComponents()
 
@@ -16,6 +17,8 @@ export function useMDXComponents(components?: MDXComponents): MDXComponents {
     ImageGallery,
     LoggerFirmwareDownload,
     LogerViktoriDownload,
+    AppDownload,
+    AppVersion,
     ...components,
   }
 }

@@ -2,6 +2,8 @@ import Link from 'next/link'
 import styles from './page.module.css'
 import { FirmwareDropdown } from './firmware-dropdown'
 import { getChargerRelease, chargerDownloads } from './charger-release'
+import { AppDropdown } from './app-dropdown'
+import { getAppRelease, APP_RELEASES_URL } from './app-release'
 
 const features = [
   { title: 'Open Source', desc: 'Открытая схема и прошивка на Arduino (ATmega328P, LGT8F328P)' },
@@ -12,11 +14,11 @@ const features = [
   { title: '10 профилей', desc: 'Независимые настройки для каждого аккумулятора' },
   { title: 'Защита', desc: 'Переполюсовка, КЗ, перегрев, перенапряжение, контроль 220В' },
   { title: 'Статистика', desc: 'Ач, Втч, внутреннее сопротивление, пусковой ток, время заряда' },
-  { title: 'Логгер', desc: 'Запись данных на SD-карту, графики заряда в браузере по Wi-Fi в реальном времени' },
-]
+  { title: 'Логгер', desc: 'Запись данных на SD-карту, графики заряда в браузере по Wi-Fi в реальном времени' },]
 
 export default async function IndexPage() {
   const release = await getChargerRelease()
+  const appRelease = await getAppRelease()
 
   return (
     <div className={styles.bg}>
@@ -37,6 +39,7 @@ export default async function IndexPage() {
             file={release.file}
             downloads={chargerDownloads}
           />
+          <AppDropdown release={appRelease} releasesUrl={APP_RELEASES_URL} centered moreHref="/docs/ob-ustroystve/prilozhenie" />
         </div>
       </div>
 

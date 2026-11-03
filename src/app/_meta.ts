@@ -6,6 +6,11 @@ export default {
     type: 'page',
     title: 'Документация',
   },
+  app: {
+    title: 'Приложение',
+    type: 'page',
+    href: '/docs/ob-ustroystve/prilozhenie',
+  },
   online: {
     title: 'Просмотр графиков',
     type: 'page',
